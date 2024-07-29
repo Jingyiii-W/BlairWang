@@ -36,6 +36,7 @@ body {
 }
 
 .navbar .brand {
+    position: relative; /* 为绝对定位提供参考 */
     margin-left: 20px;
     color: #89466c;
     font-family: 'Dancing Script', cursive;
@@ -43,7 +44,6 @@ body {
 }
 
 .navbar ul {
-    position: relative; /* 为绝对定位提供参考 */
     list-style: none;
     display: flex;
     gap: 20px;
@@ -80,40 +80,32 @@ body {
     transform-origin: bottom left;
 }
 
-.button ul li{
+.navbar .button{
+    position: relative;
+    margin: 0 10px;
+}
+
+
+.navbar .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 46%; /* 使下拉菜单对齐到menu的中心 */
+    transform: translateX(-50%); /* 将菜单向左移动其自身宽度的一半 */
+    background-color: rgb(17, 1, 1);
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar .dropdown li {
+    margin: 5px 0;
+}
+
+.navbar .button:hover .dropdown,
+.navbar .button.dropdown-active .dropdown {
     display: block;
-    height: auto;
-    transition: .2s;
-    opacity: 0;
-    transform: translateY(-65px);
-    background-color: #161515;
-    color: #f0ecec;
-    padding: 10px; /* 添加内边距 */
-    margin: 5px 0; /* 添加上下外边距以增加间隔 */
-    cursor: pointer;
-}
-
-.button:hover li{
-    height: 65px;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* 动态下划线效果 */
-.button ul li::after {
-    content: '';
-    position: absolute; /* 绝对定位 */
-    left: 0; /* 从左侧开始 */
-    bottom: 0; /* 在底部 */
-    width: 100%; /* 宽度与列表项相同 */
-    height: 2px; /* 下划线的高度 */
-    background-color: white; /* 下划线颜色 */
-    transform: scaleX(0); /* 初始状态为 0 */
-    transition: transform 0.3s ease; /* 添加过渡效果 */
-}
-
-.button ul li:hover::after {
-    transform: scaleX(1); /* 鼠标悬停时，宽度从 0 变为 100% */
 }
 
 .header h1 {
