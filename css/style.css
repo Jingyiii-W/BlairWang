@@ -15,6 +15,7 @@ body {
     background-size: cover; /* 使背景图片覆盖整个页面 */
     overflow: hidden; /* 隐藏滚动条 */
     margin: 20px; /* 添加全局边距 */
+    
 }
 
 .header-section {
@@ -25,6 +26,7 @@ body {
     padding: 25px;
     text-align: center;
     margin-top: -17px; /* 调整顶部间距 */
+    padding: 10px;
 }
 
 .navbar {
@@ -124,7 +126,7 @@ body {
 
 .section {
     width: auto; 
-    height: 78vh; /* 每个 section 占满整个视口高度 */
+    height: 77vh; /* 每个 section 占满整个视口高度 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,20 +329,3 @@ footer p {
 
 
 /*Message Board*/
-
-/*适应手机尺寸*/
-/* 小于600px的设备 */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-
-/* 小于900px的设备 */
-@media (max-width: 900px) {
-    body {
-        font-size: 15px;
-        padding: 15px;
-    }
-}
