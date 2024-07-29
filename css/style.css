@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('../images/bgrd.JPG') no-repeat center center fixed; /* 添加背景图片 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    overflow: hidden; /* 隐藏滚动条 */
+    margin: 20px; /* 添加全局边距 */
+}
+
+.header-section {
+    position: relative;
+    display: block;
+    z-index: 1;
+    background-color: rgba(4, 3, 4, 0.5);
+    padding: 25px;
+    text-align: center;
+    margin-top: 30px; /* 调整顶部间距 */
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between; /* 右对齐导航项 */
+    background-color: rgba(14, 13, 14, 0.9); /* 透明背景 */
+}
+
+.navbar .brand {
+    margin-left: 20px;
+    color: #89466c;
+    font-family: 'Dancing Script', cursive;
+    font-size: small;
+}
+
+.navbar ul {
+    position: relative; /* 为绝对定位提供参考 */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: font-size 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.button ul li{
+    display: block;
+    height: auto;
+    transition: .2s;
+    opacity: 0;
+    transform: translateY(-65px);
+    background-color: #161515;
+    color: #f0ecec;
+    padding: 10px; /* 添加内边距 */
+    margin: 5px 0; /* 添加上下外边距以增加间隔 */
+    cursor: pointer;
+}
+
+.button:hover li{
+    height: 65px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 动态下划线效果 */
+.button ul li::after {
+    content: '';
+    position: absolute; /* 绝对定位 */
+    left: 0; /* 从左侧开始 */
+    bottom: 0; /* 在底部 */
+    width: 100%; /* 宽度与列表项相同 */
+    height: 2px; /* 下划线的高度 */
+    background-color: white; /* 下划线颜色 */
+    transform: scaleX(0); /* 初始状态为 0 */
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.button ul li:hover::after {
+    transform: scaleX(1); /* 鼠标悬停时，宽度从 0 变为 100% */
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+.container {
+    position: relative;
+    height: calc(100vh - 150px); /* 调整高度，减去上下边距 */
+    overflow-y: auto; /* 允许纵向滚动 */
+    scroll-snap-type: y mandatory; /* 启用滚动捕捉 */
+    padding: 20px; /* 添加内边距 */
+}
+
+
+.section {
+    width: auto; 
+    height: 78vh; /* 每个 section 占满整个视口高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scroll-snap-align: start; /* 每个 section 在滚动时捕捉 */
+    background: rgba(242, 244, 245, 0.6); /* 设置为浅色半透明背景 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* 不需要外边距 */
+}
+
+.intro-content {
+    display: flex;
+    align-items: center; /* 垂直方向左对齐 */
+    justify-content: flex-start; /* 水平方向左对齐 */
+    width: 100%; /* 占据父容器的全部宽度 */
+    position: relative; /* 为动画效果做准备 */
+}
+
+.separator {
+    width: 100%; /* 分割线占满容器宽度 */
+    height: 2px; /* 分割线的高度 */
+    background-color: #050405; /* 分割线的颜色 */
+    margin: 20px 0; /* 分割线的上下外边距 */
+    border-radius: 5px; /* 可选，添加圆角效果 */
+}
+
+.intro-image {
+    width: 400px; /* 照片宽度 */
+    height: 400px; /* 高度自适应 */
+    border-radius: 50%; /* 可选，给照片添加圆角 */
+    object-fit: cover; /* 确保图像按比例缩放，可能裁剪 */
+    position: absolute; /* 绝对定位 */
+    left: 50%; /* 初始位置在容器中央 */
+    transform: translateX(-50%); /* 水平居中 */
+    transition: transform 5s ease; /* 添加平滑过渡效果 */
+    animation: moveImage 3s ease forwards; /* 添加动画 */
+}
+
+.text-content {
+    opacity: 0; /* 初始状态为透明 */
+    animation: fadeIn 6s ease forwards; /* 自动渐显 */
+    margin-left: 650px; /* 文本与图片之间的间距 */
+}
+
+/* 定义文本渐显动画 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* 初始状态为透明 */
+    }
+    100% {
+        opacity: 1; /* 最终状态为完全可见 */
+    }
+}
+
+/* 动画定义 */
+@keyframes moveImage {
+    from {
+        transform: translateX(-50%); /* 从中心开始 */
+    }
+    to {
+        transform: translateX(-130%); /* 移动到左侧 */
+    }
+}
+
+
+.text-content p {
+    margin: 0; /* 消除段落的默认间距 */
+}
+
+.section h2 { 
+    display: inline-block; /* 或使用 inline-block */
+    text-align: left; /* 居中对齐 */
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive; /* 应用可爱字体 */ 
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* 应用可爱字体 */
+}
+
+.main-title {
+    text-align: left;
+    position: relative; /* 为伪元素的绝对定位做准备 */
+    display: block; /* 使标题为行内块元素 */
+    margin-bottom: 10px; /* 确保标题与下面的内容之间有间距 */
+    cursor: pointer; /* 添加手形光标 */
+}
+
+.main-title::after {
+    content: ''; /* 创建一个伪元素 */
+    position: absolute; /* 绝对定位 */
+    left: 0; /* 从标题的左侧开始 */
+    bottom: -5px; /* 设置伪元素在标题下方 */
+    width: 100%; /* 与标题宽度相同 */
+    height: 2px; /* 下划线的高度 */
+    background-color: #e761a0; /* 下划线的颜色 */
+    transform: scaleX(0); /* 初始状态为0 */
+    transition: transform 0.3s ease; /* 添加平滑的过渡效果 */
+}
+
+.main-title:hover::after {
+    transform: scaleX(1); /* 鼠标悬停时，宽度从0变为100% */
+}
+
+.section p, .section ul {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.section a {
+    color: #e761a0;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}

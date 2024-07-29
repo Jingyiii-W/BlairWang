@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blair Wang's Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+</head>
+<body>
+    <header class="header-section">
+        <nav class="navbar">
+            <div class="brand">
+                <h1>Blair Wang</h1>
+            </div>
+                <ul>
+                    <li class="button">
+                        <a href="#menu" class="menu-toggle">Menu</a>
+                        <ul class="dropdown">
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C</li>
+                            <li>D</li>
+                        </ul>
+                    </li>
+                    <li class="button"><a href="#introduction" class="nav-link">Introduction</a></li>
+                    <li class="button"><a href="#recent-activity" class="nav-link">Recent Activity</a></li>
+                    <li class="button"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="introduction" class="section">
+            <div class="intro-content">
+                <img src="images/self_pho3.jpg" alt="Blair Wang" class="intro-image">
+                <div class="text-content">
+                    <h2 class="main-title" onclick="showIntroductionPopup()">Introduction🎀</h2>
+                    <h3>Hello! Welcome to my Blog🤖️</h3>
+                    <p>Blair Wang | 🇨🇳 ➡️ 🇨🇦</p>
+                    <p>🎓 Bsc | Kingston | QU | 23'</p>
+                    <p>🎓 MEng | London | UWO | 24'</p>
+                    <p>🔧 Software engineer</p>
+                    <p>🔧 Frontend: JavaScript, HTML, CSS, React</p>
+                    <p>🔧 Backend: Node.js, ExpressJS, PHP, PostgreSQL, MongoDB, MySQL</p>
+                    <p>🔧 UX/UI: Figma, Adobe XD, Adobe Photoshop</p>
+                    <p>🔧 Testing & Others: GitHub, GitLab, BitBucket</p>
+                    <p>🔧 Methodologies: Agile</p>
+
+                    <div class="separator"></div> <!-- 分割线 -->
+
+                    <p>🧩 What's More:</p>
+                    <p>💃 Dancer | Jazz Funk | K-POP | HEELS</p>
+                    <p>📖 Novelist | 🧘‍♀️ Yoga | 🎮 Animation Fans| INFJ-A</p>
+                </div>
+            </div>
+            <div style="clear: both;"></div> <!-- 清除浮动 -->
+        </section>
+        
+
+        <section id="recent-activity" class="section">
+            <h2 class="main-title" onclick="showIntroductionPopup1()">Recent Activity</h2>
+            <ul>
+                <li>Completed a project on deep learning for image recognition.</li>
+                <li>Published a blog post on optimizing cloud computing resources.</li>
+                <li>Contributed to an open-source full stack web development project.</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="main-title" onclick="showIntroductionPopup2()">Contact</h2>
+            <p>Email: <a href="mailto:18jw111@gmail.com">18jw111@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jingyi-wang-a5341b261/" target="_blank">Blair Wang</a></p>
+        </section>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
