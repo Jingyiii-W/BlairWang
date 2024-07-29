@@ -21,10 +21,10 @@ body {
     position: relative;
     display: block;
     z-index: 1;
-    background-color: rgba(4, 3, 4, 0.5);
+    background-color: rgba(6, 0, 6, 0.5);
     padding: 25px;
     text-align: center;
-    margin-top: 30px; /* 调整顶部间距 */
+    margin-top: -17px; /* 调整顶部间距 */
 }
 
 .navbar {
@@ -111,6 +111,7 @@ body {
 .header h1 {
     font-size: 3rem;
 }
+
 
 .container {
     position: relative;
@@ -247,4 +248,79 @@ body {
 
 .section a:hover {
     text-decoration: underline;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-icons p {
+    margin: 0 20px;
+}
+
+.contact-icons a {
+    color: #e761a0;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #e899d4;
+}
+
+/*通用CSS*/
+/*Return Button*/
+.return-button {
+    background: linear-gradient(45deg, #e761a0, #e899d4); /* 渐变背景颜色 */
+    color: white;                                   /* 按钮文字颜色 */
+    border: none;                                   /* 去掉边框 */
+    padding: 12px 24px;                            /* 内边距 */
+    text-align: center;                             /* 文本居中 */
+    text-decoration: none;                          /* 去掉下划线 */
+    display: inline-block;                          /* 使按钮在同一行显示 */
+    font-size: 18px;                               /* 字体大小 */
+    margin: 20px 0;                                /* 上下外边距 */
+    cursor: pointer;                                /* 鼠标指针样式 */
+    border-radius: 25px;                           /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);     /* 添加阴影效果 */
+    transition: background 0.3s, transform 0.3s;  /* 添加过渡效果 */
+}
+
+.return-button:hover {
+    background: linear-gradient(45deg, #b84588, #ac569d); /* 悬停时反转渐变颜色 */
+    transform: translateY(-2px);                        /* 悬停时轻微上升 */
+}
+
+/*Footer*/
+footer {
+    background-color: rgba(243, 238, 238, 0.5); /* 页脚背景颜色 */
+    color: white;           /* 字体颜色 */
+    text-align: center;     /* 文本居中 */
+    padding: 10px 0;       /* 上下内边距 */
+    position: relative;     /* 定位属性 */
+    bottom: 0;              /* 使其固定在底部（如果需要） */
+    width: 100%;            /* 宽度占满整个页面 */
+    border-radius: 10px;    /*圆润边框*/
+}
+
+footer p {
+    margin: 0;             /* 去掉段落的外边距 */
+    font-size: 16px;       /* 字体大小 */
+}
+
+
+/*profile页面的CSS*/
+.avatar-container {
+    margin-right: 20px; /* 头像与其他元素之间的间距 */
+}
+
+.avatar {
+    width: 100px; /* 头像宽度 */
+    height: 100px; /* 头像高度 */
+    border-radius: 50%; /* 设置圆形 */
+    object-fit: cover; /* 确保头像不变形 */
 }
