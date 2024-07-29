@@ -327,3 +327,20 @@ footer p {
 
 
 /*Message Board*/
+
+/*适应手机尺寸*/
+/* 小于600px的设备 */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* 小于900px的设备 */
+@media (max-width: 900px) {
+    body {
+        font-size: 15px;
+        padding: 15px;
+    }
+}
