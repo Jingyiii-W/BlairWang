@@ -13,7 +13,6 @@ body {
     line-height: 1.6;
     background: url('../images/bgrd.JPG') no-repeat center center fixed; /* 添加背景图片 */
     background-size: cover; /* 使背景图片覆盖整个页面 */
-    overflow: hidden; /* 隐藏滚动条 */
     margin: 20px; /* 添加全局边距 */
     
 }
@@ -40,6 +39,7 @@ body {
 .navbar .brand {
     position: relative; /* 为绝对定位提供参考 */
     margin-left: 20px;
+    margin-top: 0.9%;
     color: #89466c;
     font-family: 'Dancing Script', cursive;
     font-size: small;
@@ -120,9 +120,8 @@ body {
     height: calc(100vh - 150px); /* 调整高度，减去上下边距 */
     overflow-y: auto; /* 允许纵向滚动 */
     scroll-snap-type: y mandatory; /* 启用滚动捕捉 */
-    padding: 20px; /* 添加内边距 */
+    padding: -50%; /* 添加内边距 */
 }
-
 
 .section {
     width: auto; 
@@ -155,12 +154,12 @@ body {
 }
 
 .intro-image {
-    width: 400px; /* 照片宽度 */
-    height: 400px; /* 高度自适应 */
+    width: 25%; /* 照片宽度 */
+    height: 95%; /* 高度自适应 */
     border-radius: 50%; /* 可选，给照片添加圆角 */
     object-fit: cover; /* 确保图像按比例缩放，可能裁剪 */
     position: absolute; /* 绝对定位 */
-    left: 50%; /* 初始位置在容器中央 */
+    left: 45%; /* 初始位置在容器中央 */
     transform: translateX(-50%); /* 水平居中 */
     transition: transform 5s ease; /* 添加平滑过渡效果 */
     animation: moveImage 3s ease forwards; /* 添加动画 */
@@ -169,7 +168,7 @@ body {
 .text-content {
     opacity: 0; /* 初始状态为透明 */
     animation: fadeIn 6s ease forwards; /* 自动渐显 */
-    margin-left: 650px; /* 文本与图片之间的间距 */
+    margin-left: 50%; /* 文本与图片之间的间距 */
 }
 
 /* 定义文本渐显动画 */
@@ -329,3 +328,5 @@ footer p {
 
 
 /*Message Board*/
+
+
